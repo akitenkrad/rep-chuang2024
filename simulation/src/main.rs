@@ -427,6 +427,7 @@ fn cmd_run(args: RunArgs, scratch: bool) {
         tol: args.tol,
         seed: Some(seed),
         llm: LlmSettings {
+            think: None,
             temperature: args.temperature,
             seed: args.llm_seed,
             cache_path: Some(args.cache_path.clone()),
@@ -605,6 +606,7 @@ fn cmd_sweep(args: SweepArgs, scratch: bool) {
     // sweep はライブ LLM のみ (`--mock` を持たない) なので，モデル名は最初に組んだ
     // クライアントが名乗った値を親子で共有する．
     let probe_settings = LlmSettings {
+        think: None,
         temperature: args.temperature,
         seed: args.llm_seed,
         cache_path: Some(args.cache_path.clone()),
@@ -738,6 +740,7 @@ fn cmd_sweep(args: SweepArgs, scratch: bool) {
                         tol: args.tol,
                         seed: Some(seed),
                         llm: LlmSettings {
+                            think: None,
                             temperature: args.temperature,
                             seed: args.llm_seed,
                             cache_path: Some(args.cache_path.clone()),
@@ -972,6 +975,7 @@ fn cmd_reproduce(args: ReproduceArgs, scratch: bool) {
         tol: 1e-12,
         seed: Some(args.seed),
         llm: LlmSettings {
+            think: None,
             temperature: args.temperature,
             seed: args.llm_seed,
             cache_path: if args.mock {

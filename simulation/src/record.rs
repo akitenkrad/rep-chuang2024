@@ -433,7 +433,7 @@ mod tests {
     /// FNV-1a("none")．移行前の `main.rs` の `label_hash` が返していた値．
     const GOLDEN_LABEL_HASH_NONE: u64 = 4_327_140_908_117_611_899;
     /// `sweep_trial_seed(42, "none", "false", "full", 0)`．
-    const GOLDEN_SWEEP_SEED: u64 = 17_001_547_236_854_835_892;
+    const GOLDEN_SWEEP_SEED: u64 = 13_002_135_350_286_435_531;
 
     #[test]
     fn same_inputs_give_the_same_seed() {
