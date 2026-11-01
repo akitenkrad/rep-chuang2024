@@ -14,7 +14,7 @@ use crate::simulation::SimulationResult;
 /// バイナリ名 (`chuang`) と揃える．
 pub const EXPERIMENT: &str = "chuang";
 /// リポジトリの安定 id．git remote の名前とは独立に固定する．
-pub const REPO_ID: &str = "chuang2024";
+pub const REPO_ID: &str = "rep-chuang2024";
 /// 分野．初期意見と話者-聴者ペアの抽選に RNG を使うので `simulation`
 /// (= `master_seed` が必須)．
 ///
@@ -47,7 +47,7 @@ pub fn replication() -> Replication {
             "confirmation-bias-breaks-consensus",
             "LLM agents drift toward truthful consensus, and injecting a confirmation bias fragments opinions instead",
         ))
-        .obsidian_note("研究/98_論文レポート/80-再現実験/実装完了/chuang2024/設計書.md")
+        .obsidian_note("研究/98_論文レポート/80-再現実験/実装完了/rep-chuang2024/設計書.md")
 }
 
 // ---------------------------------------------------------------------------
